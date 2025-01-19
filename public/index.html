@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="min-h-screen bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-sm z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <span class="text-xl font-bold text-gray-900">Haikal Kamil</span>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="flex items-center md:hidden">
+            <button id="menuButton" class="text-gray-500 hover:text-gray-600">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="4" x2="20" y1="12" y2="12" />
+                <line x1="4" x2="20" y1="6" y2="6" />
+                <line x1="4" x2="20" y1="18" y2="18" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Desktop navigation -->
+          <div class="hidden md:flex md:items-center md:space-x-8">
+            <button
+              onclick="scrollToSection('home')"
+              class="nav-link text-black-600 hover:text-blue-900 transition-colors"
+              data-section="home"
+            >
+              Home
+            </button>
+            <button
+              onclick="scrollToSection('about')"
+              class="nav-link text-black-600 hover:text-blue-900 transition-colors"
+              data-section="about"
+            >
+              About
+            </button>
+            <button
+              onclick="scrollToSection('projects')"
+              class="nav-link text-black-600 hover:text-blue-900 transition-colors"
+              data-section="projects"
+            >
+              Projects
+            </button>
+            <button
+              onclick="scrollToSection('contact')"
+              class="nav-link text-black-600 hover:text-blue-900 transition-colors"
+              data-section="contact"
+            >
+              Contact
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile navigation -->
+      <div id="mobileMenu" class="hidden md:hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
+          <button
+            onclick="scrollToSection('home')"
+            class="mobile-nav-link block px-3 py-2 text-gray-600 hover:text-gray-900 w-full text-left"
+            data-section="home"
+          >
+            Home
+          </button>
+          <button
+            onclick="scrollToSection('about')"
+            class="mobile-nav-link block px-3 py-2 text-gray-600 hover:text-gray-900 w-full text-left"
+            data-section="about"
+          >
+            About
+          </button>
+          <button
+            onclick="scrollToSection('projects')"
+            class="mobile-nav-link block px-3 py-2 text-gray-600 hover:text-gray-900 w-full text-left"
+            data-section="projects"
+          >
+            Projects
+          </button>
+          <button
+            onclick="scrollToSection('contact')"
+            class="mobile-nav-link block px-3 py-2 text-gray-600 hover:text-gray-900 w-full text-left"
+            data-section="contact"
+          >
+            Contact
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <div
+            class="mb-8 transform hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              src="./img/4x6_ikal-removebg-preview-removebg-preview.png"
+              alt="Profile"
+              class="w-48 h-48 rounded-full mx-auto object-cover border-4 border-white shadow-lg hover:border-blue-500 transition-colors"
+            />
+          </div>
+          <h1
+            class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 animate-fade-in"
+          >
+            Haikal Kamil
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Frontend Developer & UI/UX Designer
+          </p>
+          <button
+            onclick="scrollToSection('contact')"
+            class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-all hover:scale-105 transform"
+          >
+            Get in Touch
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+          About Me
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div
+            class="transform hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              src="./img/4x6_ikal-removebg-preview-removebg-preview.png"
+              alt="About"
+              class="ml-16 rounded-lg shadow-lg"
+            />
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold mb-4">My Journey</h3>
+            <p class="text-gray-600 mb-6 mr-14 text-justify">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+              doloremque magni quas explicabo cum commodi quia est, quibusdam
+              illum porro minima quaerat molestiae omnis perspiciatis quae et
+              placeat architecto provident praesentium autem accusantium.
+              Dignissimos libero ipsam, quo quaerat iusto officia consectetur
+              dolore eos asperiores quas repellendus sapiente, ratione
+              blanditiis quos.
+            </p>
+            <div class="space-y-4">
+              <div>
+                <h4 class="font-semibold mb-4">Skills</h4>
+                <div class="space-y-4" id="skills-container">
+                  <!-- Skills will be populated by JavaScript -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+          My Projects
+        </h2>
+
+        <!-- Category Filter -->
+        <div
+          class="flex flex-wrap justify-center gap-4 mb-12"
+          id="category-filters"
+        >
+          <!-- Categories will be populated by JavaScript -->
+        </div>
+
+        <!-- Projects Grid -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          id="projects-grid"
+        >
+          <!-- Projects will be populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+          Get in Touch
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+          <div class="space-y-6">
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+              <div class="space-y-4">
+                <div class="flex items-center space-x-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="text-blue-600"
+                  >
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <p class="text-gray-600">
+                    Darma, Kuningan, Jawa Barat <br />
+                    Indonesia
+                  </p>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="text-blue-600"
+                  >
+                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                  </svg>
+                  <p class="text-gray-600">kamil.haikal2018@gmail.com</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-center space-x-6">
+              <a
+                href="#"
+                class="text-gray-600 hover:text-blue-600 transition-colors transform hover:scale-110"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+                  />
+                  <path d="M9 18c-4.51 2-5-2-7-2" />
+                </svg>
+              </a>
+              <a
+                href="https://www.instagram.com/haikal.kamil"
+                target="_blank"
+                class="text-gray-600 hover:text-blue-600 transition-colors transform hover:scale-110"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect width="20" height="20" x="2" y="2" rx="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="text-gray-600 hover:text-blue-600 transition-colors transform hover:scale-110"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <form
+            class="space-y-6"
+            id="contact-form"
+            action="https://api.web3forms.com/submit"
+            method="POST"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="81678164-9fe3-430d-8cac-9d8f3b9c64b2"
+            />
+
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700">
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 transition-colors"
+                required
+              />
+            </div>
+
+            <div>
+              <label
+                for="email"
+                class="block text-sm font-medium text-gray-700"
+              >
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 transition-colors"
+                required
+              />
+            </div>
+
+            <div>
+              <label
+                for="message"
+                class="block text-sm font-medium text-gray-700"
+              >
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 transition-colors"
+                required
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-all transform hover:scale-105"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-center space-x-6 mb-8">
+          <a
+            href="#"
+            class="hover:text-blue-400 transition-colors transform hover:scale-110"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+              />
+              <path d="M9 18c-4.51 2-5-2-7-2" />
+            </svg>
+          </a>
+          <a
+            href="https://www.instagram.com/haikal.kamil"
+            target="_blank"
+            class="hover:text-blue-400 transition-colors transform hover:scale-110"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect width="20" height="20" x="2" y="2" rx="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+            </svg>
+          </a>
+          <a
+            href="#"
+            class="hover:text-blue-400 transition-colors transform hover:scale-110"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"
+              />
+            </svg>
+          </a>
+          <a
+            href="#"
+            class="hover:text-blue-400 transition-colors transform hover:scale-110"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+          </a>
+        </div>
+        <p class="text-center text-gray-400">
+          © 2025 Haikal Kamil. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

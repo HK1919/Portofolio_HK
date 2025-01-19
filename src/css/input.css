@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Active navigation link styles */
+@layer components {
+  .nav-link.active,
+  .mobile-nav-link.active {
+    @apply text-blue-600 font-semibold;
+  }
+
+  .mobile-nav-link.active {
+    @apply bg-blue-50;
+  }
+
+  /* Progress bar animation */
+  .skill-progress {
+    transition: width 1.5s ease-out;
+  }
+
+  /* Project card hover effects */
+  .project-card {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .project-card:hover {
+    transform: scale(1.05);
+  }
+
+  /* Form input focus styles */
+  input:focus,
+  textarea:focus {
+    @apply ring-2 ring-blue-500 border-blue-500;
+    outline: none;
+  }
+
+  /* Social media icon hover effects */
+  .social-icon {
+    transition: all 0.3s ease;
+  }
+
+  .social-icon:hover {
+    transform: scale(1.1);
+    color: #3b82f6;
+  }
+}
