@@ -13,28 +13,27 @@ const categories = ["All", "Web Development", "Mobile Apps", "UI/UX Design"];
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "PBK Platform Website",
     category: "Web Development",
     description:
-      "A full-stack e-commerce platform built with React and Node.js",
-    image:
-      "https://images.unsplash.com/photo-1661956602116-aa6865609028?auto=format&fit=crop&q=80&w=800",
+      "Barudak Paguyuban Komputer: A hub for tech enthusiasts to share knowledge, updates, and community events.",
+    image: "./public/img/web_pbk.png",
   },
   {
     id: 2,
-    title: "Fitness Tracking App",
+    title: "Weather Apps",
     category: "Mobile Apps",
-    description: "Mobile application for tracking workouts and nutrition",
-    image:
-      "https://images.unsplash.com/photo-1674574124649-778f9afc0e9c?auto=format&fit=crop&q=80&w=800",
+    description:
+      "A sleek mobile application designed to deliver real-time weather updates with intuitive data visualization",
+    image: "./public/img/weather.png",
   },
   {
     id: 3,
-    title: "Banking Dashboard",
+    title: "Apps Book Design",
     category: "UI/UX Design",
-    description: "Modern banking dashboard design with data visualization",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+    description:
+      "Apps Book Design: A modern, user-friendly interface for digital book management.",
+    image: "./public/img/Apps_Book.png",
   },
 ];
 
